@@ -1,0 +1,32 @@
+extends mainLayout
+
+block content
+  h3 #{viewTitle}
+  form(action='/student', method='POST', autocomplete='off')
+    input(type='hidden', name='_id', value=student?student._id:null)
+    #form-group
+      label Full Name
+        input.form-control(type='text', name='fullName', placeholder='Full Name', value=student?student.fullName:null, required)
+    #form-group
+      label Email
+        input.form-control(type='email', name='email', placeholder='Email', value=student?student.email:null, required)
+    #form-group
+      label Mobile
+        input.form-control(type='number', name='mobile', placeholder='Mobile', value=student?student.mobile:null, required)
+    #form-group
+      label City
+        input.form-control(type='text', name='city', placeholder='City', value=student?student.city:null, required)
+    br
+    #form-group
+      button.btn.btn-info(type='submit')
+        i.fa.fa-database
+        | Submit
+      |
+      |
+      a.btn.btn-secondary(href='/student/list')
+        .fa.fa-list-alt
+        | View All
+
+  br
+  p Developed by Shreedutt Vyas 200393404
+    

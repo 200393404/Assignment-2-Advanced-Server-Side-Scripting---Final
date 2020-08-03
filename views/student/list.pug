@@ -1,0 +1,34 @@
+extends mainLayout
+
+block content
+  h3
+    a.btn.btn-secondary(href='/student')
+      i.fa.fa-plus
+        |   Create New
+        |   Student List
+          
+  table.table.table-striped
+    thead
+      tr
+        th Full Name
+        th Email
+        th Mobile
+        th City
+        th
+    tbody
+      each data in list
+        tr
+          td #{data.fullName}
+          td #{data.email}
+          td #{data.mobile}
+          td #{data.city}
+          td 
+            a(href=`/student/${data._id}`)
+              i.fa.fa-pencil.fa-lg(aria-hidden='true')
+            |
+            |
+            a(href=`/student/delete/${data._id}`, onclick="return confirm('Are you sure to delete this record ?');")
+              i.fa.fa-trash.fa-lg(aria-hidden='true')
+  
+  br
+  p Developed by Shreedutt Vyas 200393404
