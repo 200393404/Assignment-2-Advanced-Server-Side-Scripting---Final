@@ -8,3 +8,13 @@ One of the new feature developed as per point no 11 in the pdf is session
 - With the help of npm package named express-session, I have tried to manage sesion over.
 
 If user is not active for a particular period of time then it automatically gets logout
+
+## For running this project
+
+Take a clone first
+
+Open command prompt
+
+npm i 
+
+npm start
